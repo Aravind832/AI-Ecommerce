@@ -23,6 +23,6 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
     ordering_fields = ["price", "rating", "created_at"]
 
 
-class ProductDetailAPIView(generics.RetrieveAPIView):
+class ProductDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
